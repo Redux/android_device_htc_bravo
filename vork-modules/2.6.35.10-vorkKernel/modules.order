@@ -1,0 +1,12 @@
+kernel/fs/nfs_common/nfs_acl.ko
+kernel/fs/nfs/nfs.ko
+kernel/fs/exportfs/exportfs.ko
+kernel/fs/nfsd/nfsd.ko
+kernel/fs/lockd/lockd.ko
+kernel/fs/cifs/cifs.ko
+kernel/fs/fuse/fuse.ko
+kernel/fs/btrfs/btrfs.ko
+kernel/drivers/net/wireless/bcm4329/bcm4329.ko
+kernel/net/sunrpc/sunrpc.ko
+kernel/net/sunrpc/auth_gss/auth_rpcgss.ko
+kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko
