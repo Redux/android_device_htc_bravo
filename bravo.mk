@@ -184,7 +184,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 # Broadcom FM radio
-$(call inherit-product, device/htc/common/fm_radio.mk)
+$(call inherit-product, device/htc/bravo/fm_radio.mk)
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
