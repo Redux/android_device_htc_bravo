@@ -22,3 +22,4 @@
 
 add_lunch_combo bravo-userdebug
 add_lunch_combo bravo-eng
+add_lunch_combo bravo-user

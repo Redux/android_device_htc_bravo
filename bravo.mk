@@ -27,32 +27,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
-    ro.ril.ecc.HTC-ELL=92,93,94 \
-    ro.ril.ecc.HTC-WWE=999 \
-    ro.ril.enable.a52.HTC-ITA=1 \
-    ro.ril.enable.a53.HTC-ITA=1 \
-    ro.ril.enable.a52=0 \
-    ro.ril.enable.a53=1 \
-    ro.ril.enable.dtm = 1 \
-    ro.ril.gprsclass = 12 \
-    ro.ril.hsdpa.category=8 \
-    ro.ril.hsupa.category=5 \
-    ro.ril.hsxpa=2 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=60
 
 # Default network type.
 # 0 => WCDMA preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0
-
-# Set default_france.acdb to audio_ctl driver if the ro.cid is HTC__203
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.enable.prl.recognition=1
-
-# AGPS otpions
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.def.agps.mode=2
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -134,49 +115,6 @@ PRODUCT_COPY_FILES += \
 	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko \
 	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko \
 	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/bcm4329.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/cifs/cifs.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/exportfs/exportfs.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/exportfs/exportfs.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/fuse/fuse.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/fuse/fuse.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/lockd/lockd.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/lockd/lockd.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/nfs/nfs.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/nfs/nfs.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/nfsd/nfsd.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/nfsd/nfsd.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/fs/nls/nls_utf8.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/fs/nls/nls_utf8.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ah6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ah6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/esp6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/esp6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ip6_tunnel.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ip6_tunnel.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ipcomp6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ipcomp6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ipv6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/ipv6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/mip6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/mip6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/sit.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/sit.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/tunnel6.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/tunnel6.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_beet.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/#xfrm6_mode_beet.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_transport.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/#xfrm6_mode_transport.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/xfrm6_mode_tunnel.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/#xfrm6_mode_tunnel.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/xfrm6_tunnel.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/ipv6/xfrm6_tunnel.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/#auth_gss/auth_rpcgss.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/#auth_gss/rpcsec_gss_krb5.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/sunrpc.ko:system/lib/modules/2.6.35.9-cyanogenmod/kernel/net/sunrpc/sunrpc.ko \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.alias.bin:system/lib/modules/2.6.35.9-cyanogenmod/modules.alias.bin \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.alias:system/lib/modules/2.6.35.9-cyanogenmod/modules.alias \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.builtin.bin:system/lib/modules/2.6.35.9-cyanogenmod/modules.builtin.bin \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.builtin:system/lib/modules/2.6.35.9-cyanogenmod/modules.builtin \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.ccwmap:system/lib/modules/2.6.35.9-cyanogenmod/modules.ccwmap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.dep.bin:system/lib/modules/2.6.35.9-cyanogenmod/modules.dep.bin \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.dep:system/lib/modules/2.6.35.9-cyanogenmod/modules.dep \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.devname:system/lib/modules/2.6.35.9-cyanogenmod/modules.devname \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.ieee1394map:system/lib/modules/2.6.35.9-cyanogenmod/modules.ieee1394map \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.inputmap:system/lib/modules/2.6.35.9-cyanogenmod/modules.inputmap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.isapnpmap:system/lib/modules/2.6.35.9-cyanogenmod/modules.isapnpmap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.ofmap:system/lib/modules/2.6.35.9-cyanogenmod/modules.ofmap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.order:system/lib/modules/2.6.35.9-cyanogenmod/modules.order \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.pcimap:system/lib/modules/2.6.35.9-cyanogenmod/modules.pcimap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.seriomap:system/lib/modules/2.6.35.9-cyanogenmod/modules.seriomap \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.softdep:system/lib/modules/2.6.35.9-cyanogenmod/modules.softdep \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.35.9-cyanogenmod/modules.symbols.bin \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.symbols:system/lib/modules/2.6.35.9-cyanogenmod/modules.symbols \
-#    device/htc/bravo/modules/2.6.35.9-cyanogenmod/modules.usbmap:system/lib/modules/2.6.35.9-cyanogenmod/modules.usbmap
 
 LOCAL_KERNEL := device/htc/bravo/kernel
 
