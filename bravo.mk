@@ -90,6 +90,58 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/bravo/vold.fstab:system/etc/vold.fstab
 
+ifdef OLD_KERNEL
+KERNEL_VER := 2.6.35.8-vorkKernel
+DIR := device/htc/bravo/old-kernel
+
+PRODUCT_COPY_FILES += \
+	$(DIR)/modules/bcm4329.ko:system/lib/modules/bcm4329.ko \
+	$(DIR)/modules/$(KERNEL_VER)/modules.alias:system/lib/modules/$(KERNEL_VER)/modules.alias \
+	$(DIR)/modules/$(KERNEL_VER)/modules.alias.bin:system/lib/modules/$(KERNEL_VER)/modules.alias.bin \
+	$(DIR)/modules/$(KERNEL_VER)/modules.builtin:system/lib/modules/$(KERNEL_VER)/modules.builtin \
+	$(DIR)/modules/$(KERNEL_VER)/modules.builtin.bin:system/lib/modules/$(KERNEL_VER)/modules.builtin.bin \
+	$(DIR)/modules/$(KERNEL_VER)/modules.ccwmap:system/lib/modules/$(KERNEL_VER)/modules.ccwmap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.dep:system/lib/modules/$(KERNEL_VER)/modules.dep \
+	$(DIR)/modules/$(KERNEL_VER)/modules.dep.bin:system/lib/modules/$(KERNEL_VER)/modules.dep.bin \
+	$(DIR)/modules/$(KERNEL_VER)/modules.ieee1394map:system/lib/modules/$(KERNEL_VER)/modules.ieee1394map \
+	$(DIR)/modules/$(KERNEL_VER)/modules.inputmap:system/lib/modules/$(KERNEL_VER)/modules.inputmap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.isapnpmap:system/lib/modules/$(KERNEL_VER)/modules.isapnpmap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.ofmap:system/lib/modules/$(KERNEL_VER)/modules.ofmap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.order:system/lib/modules/$(KERNEL_VER)/modules.order \
+	$(DIR)/modules/$(KERNEL_VER)/modules.pcimap:system/lib/modules/$(KERNEL_VER)/modules.pcimap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.seriomap:system/lib/modules/$(KERNEL_VER)/modules.seriomap \
+	$(DIR)/modules/$(KERNEL_VER)/modules.symbols:system/lib/modules/$(KERNEL_VER)/modules.symbols \
+	$(DIR)/modules/$(KERNEL_VER)/modules.symbols.bin:system/lib/modules/$(KERNEL_VER)/modules.symbols.bin \
+	$(DIR)/modules/$(KERNEL_VER)/modules.usbmap:system/lib/modules/$(KERNEL_VER)/modules.usbmap \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/$(KERNEL_VER)/kernel/drivers/net/wireless/bcm4329/bcm4329.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/cifs/cifs.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/cifs/cifs.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/exportfs/exportfs.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/exportfs/exportfs.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/fuse/fuse.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/fuse/fuse.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/lockd/lockd.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/lockd/lockd.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/nfs/nfs.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/nfs/nfs.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/nfs_common/nfs_acl.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/nfs_common/nfs_acl.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/nfsd/nfsd.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/nfsd/nfsd.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/fs/nls/nls_utf8.ko:system/lib/modules/$(KERNEL_VER)/kernel/fs/nls/nls_utf8.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/ah6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/ah6.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/esp6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/esp6.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/ip6_tunnel.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/ip6_tunnel.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/ipcomp6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/ipcomp6.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/ipv6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/ipv6.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/mip6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/mip6.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/sit.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/sit.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/tunnel6.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/unnel66.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_beet.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_beet.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_transport.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_transport.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_tunnel.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_mode_tunnel.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_tunnel.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/ipv6/xfrm6_tunnel.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/sunrpc/sunrpc.ko:system/lib/modules/$(KERNEL_VER)/kernel/net/sunrpc/sunrpc.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko:system/lib/modules$(KERNEL_VER)/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko \
+	$(DIR)/modules/$(KERNEL_VER)/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko:system/lib/modules$(KERNEL_VER)/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko
+
+	
+LOCAL_KERNEL := $(DIR)/kernel
+else
+
 PRODUCT_COPY_FILES += \
 	device/htc/bravo/vork-modules/bcm4329.ko:system/lib/modules/bcm4329.ko \
 	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.alias:system/lib/modules/2.6.35.10-vorkKernel/modules.alias \
@@ -117,6 +169,8 @@ PRODUCT_COPY_FILES += \
 	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko
 
 LOCAL_KERNEL := device/htc/bravo/kernel
+
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
