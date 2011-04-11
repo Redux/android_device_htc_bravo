@@ -98,33 +98,31 @@ PRODUCT_COPY_FILES += \
 LOCAL_KERNEL := device/htc/bravo/rxKernel
 
 else
-PRODUCT_COPY_FILES += \
-	device/htc/bravo/vork-modules/bcm4329.ko:system/lib/modules/bcm4329.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.alias:system/lib/modules/2.6.35.10-vorkKernel/modules.alias \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.alias.bin:system/lib/modules/2.6.35.10-vorkKernel/modules.alias.bin \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.builtin:system/lib/modules/2.6.35.10-vorkKernel/modules.builtin \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.builtin.bin:system/lib/modules/2.6.35.10-vorkKernel/modules.builtin.bin \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.dep:system/lib/modules/2.6.35.10-vorkKernel/modules.dep \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.dep.bin:system/lib/modules/2.6.35.10-vorkKernel/modules.dep.bin \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.devname:system/lib/modules/2.6.35.10-vorkKernel/modules.devname \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.order:system/lib/modules/2.6.35.10-vorkKernel/modules.order \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.softdep:system/lib/modules/2.6.35.10-vorkKernel/modules.softdep \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.symbols:system/lib/modules/2.6.35.10-vorkKernel/modules.symbols \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/modules.symbols.bin:system/lib/modules/2.6.35.10-vorkKernel/modules.symbols.bin \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/btrfs/btrfs.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/btrfs/btrfs.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/cifs/cifs.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/exportfs/exportfs.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/exportfs/exportfs.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/fuse/fuse.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/fuse/fuse.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/lockd/lockd.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/lockd/lockd.so \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/nfs/nfs.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/nfs/nfs.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/nfs_common/nfs_acl.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/nfs_common/nfs_acl.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/fs/nfsd/nfsd.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/fs/nfsd/nfsd.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/sunrpc.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/sunrpc.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko \
-	device/htc/bravo/vork-modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/2.6.35.10-vorkKernel/kernel/drivers/net/wireless/bcm4329/bcm4329.ko
 
-LOCAL_KERNEL := device/htc/bravo/kernel
+PRODUCT_COPY_FILES += \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/2.6.37.4-redux-CFS-SVS/kernel/drivers/net/wireless/bcm4329/bcm4329.ko \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.alias:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.alias \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.alias.bin:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.alias.bin \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.builtin:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.builtin \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.builtin.bin:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.builtin.bin \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ccwmap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ccwmap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.dep:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.dep \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.dep.bin:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.dep.bin \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.devname:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.devname \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ieee1394map:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ieee1394map \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.inputmap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.inputmap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.isapnpmap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.isapnpmap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ofmap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.ofmap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.order:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.order \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.pcimap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.pcimap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.seriomap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.seriomap \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.softdep:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.softdep \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.symbols:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.symbols \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.symbols.bin:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.symbols.bin \
+    device/htc/bravo/rx-kernel/system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.usbmap:system/lib/modules/2.6.37.4-redux-CFS-SVS/modules.usbmap \
+    device/htc/bravo/rx-kernel/system/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
+
+LOCAL_KERNEL := device/htc/bravo/rx-kernel/kernel
 endif
 
 PRODUCT_COPY_FILES += \

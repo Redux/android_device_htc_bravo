@@ -71,10 +71,14 @@ BOARD_USE_FROYO_LIBCAMERA := true
 # Use RGB565 surfaces until userspace drivers are upgraded
 BOARD_NO_RGBX_8888 := true
 
-#do not use RGBA_888 unti userspace drivers are upgraded, to ensure smooth scrolling
+#do not use RGBA_888 until userspace drivers are upgraded, to ensure smooth scrolling
 NO_RGBX_8888_HACK := true
 
 BOARD_USES_QCOM_LIBS := true
+
+ifndef RX_KERNEL
+    BOARD_KERNEL_NEW_PPPOX := true
+endif
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
@@ -97,3 +101,7 @@ TARGET_PREBUILT_KERNEL := device/htc/bravo/kernel
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := bravo
 # AMSS version to use for GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
+
+BOARD_USES_QCOM_LIBS := true
+BOARD_USES_QCOM_LIBRPC := true
+BOARD_USES_QCOM_GPS := true
